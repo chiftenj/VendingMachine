@@ -1,0 +1,19 @@
+﻿<Application x:Class="Vending_Machine.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Vending_Machine"
+             xmlns:views="clr-namespace:Vending_Machine.Views"
+             xmlns:viewmodels="clr-namespace:Vending_Machine.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+            <views:MenuView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:VendinMachineViewModel}">
+            <views:VendingMachineView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:UserViewModel}">
+            <views:UserView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

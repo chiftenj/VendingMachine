@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vending_Machine"
+        xmlns:Views="clr-namespace:Vending_Machine.Views" x:Class="Vending_Machine.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="680">
+    <Grid>
+
+        <Grid>
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="E-Corp Vending Machine "  Grid.Column="0"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                        <ContentControl Width="auto" HorizontalAlignment="Right"    VerticalAlignment="Center" Content="{Binding UserViewModel}" Grid.Column="1"/>
+                    </Grid>
+                    <Separator Height="2" Background="#848284" Margin="5 0 5 0"/>
+                </StackPanel>
+
+                <ContentControl DockPanel.Dock="Bottom" Content="{Binding SelectedViewModel}"/>
+            </DockPanel>
+        </Grid>
+
+    </Grid>
+
+</Window>
